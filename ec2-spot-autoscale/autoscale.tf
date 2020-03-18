@@ -20,6 +20,8 @@ resource "aws_autoscaling_group" "scale" {
   min_size         = 0
   default_cooldown = 60 # In real life you'll probably want this higher
 
+  target_group_arns = [aws_lb_target_group.lb.arn]
+
   mixed_instances_policy {
     instances_distribution {
       on_demand_base_capacity                  = 0 # No On-Demand please
