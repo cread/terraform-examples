@@ -42,6 +42,6 @@ variable "cidr_newbits_local" {
 
 variable "cidr_offset_local" {
   type        = number
-  default     = 6
+  default     = 5
   description = "Offset bits to add to netmask for NAT subnets"
 }
